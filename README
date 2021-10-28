@@ -1,0 +1,19 @@
+You can use tests only on Linux
+
+For running test you need to:
+
+1. Create file (.env) in the project directory
+2. In the file write:
+
+    user_name = ""
+    user_password = ""
+
+    user_id = ""
+    user_secret = ""
+
+In the user_name and user_password you need to write credentials for Magento.
+In the user_id and user_secret you need to write credentials for Walmart.
+
+3. Install required packages with the command: pip install -r requirements.txt
+4. Open Terminal and go to the autotests directory.
+5. Run autotest with the command: pytest -v --tb=line test_walmart_wizard.py
