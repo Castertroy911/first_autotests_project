@@ -1,0 +1,1 @@
+magento_base_url = "http://10.0.30.122/magento_2/prefix_clear/admin/"
