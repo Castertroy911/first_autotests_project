@@ -9,7 +9,7 @@ from waitings import *
 class TestWizard():
     def test_walmart_wizard(self, browser):
         # Начинаем прохождение визарда Walmart
-        browser.get("http://10.0.30.122/magento_2/prefix_clear/admin/m2epro/wizard_installationWalmart/")
+        browser.get("http://" + VM_IP + "/magento_2/prefix_clear/admin/m2epro/wizard_installationWalmart/")
         try:
             close = wait(".action", browser)
         except TimeoutException as err:

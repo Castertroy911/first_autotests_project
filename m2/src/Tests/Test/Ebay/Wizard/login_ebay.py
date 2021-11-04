@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 from waitings import *
-
+from m2.config.local_config import *
 
 def ebay_log_in(a, b, browser):
     try:
@@ -18,4 +18,4 @@ def ebay_log_in(a, b, browser):
     signin.click()
     submit = browser.find_element(By.ID, "submit")
     submit.click()
-    browser.get("http://10.0.30.122/magento_2/prefix_clear/admin/m2epro/wizard_installationEbay/afterToken/mode/sandbox/")
+    browser.get("http://" + VM_IP + "/magento_2/prefix_clear/admin/m2epro/wizard_installationEbay/afterToken/mode/sandbox/")

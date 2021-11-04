@@ -8,7 +8,7 @@ from selenium.common.exceptions import NoSuchElementException
 @pytest.mark.wizard
 class TestWizard():
     def test_ebay_wizard(self, browser):
-        ebay = browser.get("http://10.0.30.122/magento_2/prefix_clear/admin/m2epro/wizard_installationEbay/")
+        ebay = browser.get("http://" + VM_IP + "/magento_2/prefix_clear/admin/m2epro/wizard_installationEbay/")
         try:
             close = wait(".action", browser)
         except TimeoutException as err:

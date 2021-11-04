@@ -11,7 +11,7 @@ from selenium.common.exceptions import TimeoutException
 class TestWizard():
     def  test_amazon_wizard(self, browser):
         # Начинаем прохождение визарда Walmart
-        browser.get("http://10.0.30.122/magento_2/prefix_clear/admin/m2epro/wizard_installationAmazon/")
+        browser.get("http://" + VM_IP + "/magento_2/prefix_clear/admin/m2epro/wizard_installationAmazon/")
         try:
             close = wait(".action", browser)
         except TimeoutException as err:

@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from waitings import *
-
+from m2.config.local_config import *
 
 
 def amazon_log_in(a, b, c, browser):
@@ -43,4 +43,4 @@ def amazon_log_in(a, b, c, browser):
     check.click()
     button = wait(".primary", browser)
     button = wait(".primary", browser)
-    browser.get("http://10.0.30.122/magento_2/prefix_clear/admin/m2epro/wizard_installationAmazon/afterGetTokenAutomatic/?Merchant=A1VHQHEVZ1GTIX&Marketplace=A1AM78C64UM0Y8&MWSAuthToken=amzn.mws.bca3f75c-a693-49c7-6da0-649e33313dfb&Signature=VAkK4rRdGpgI%2F1nlIB8U9oNKv7lDV0JSoXM6ekBHsUE%3D&SignedString=POST%0D%0Ahttps%3A%2F%2Fm2epro.com%2Faccept-a-na.php%0D%0A%3Fback_url%3DaHR0cDovLzEwLjAuMzAuMTIyL21hZ2VudG9fMi9wcmVmaXhfY2xlYXIvYWRtaW4vbTJlcHJvL3dpemFyZF9pbnN0YWxsYXRpb25BbWF6b24vYWZ0ZXJHZXRUb2tlbkF1dG9tYXRpYy8%3D%0D%0AAWSAccessKeyId%3DAKIAJUNZPBN3EXTI3FCQ%26MWSAuthToken%3Damzn.mws.bca3f75c-a693-49c7-6da0-649e33313dfb%26Marketplace%3DA1AM78C64UM0Y8%26Merchant%3DA1VHQHEVZ1GTIX%26SignatureMethod%3DHmacSHA256%26SignatureVersion%3D2")
+    browser.get("http://" + VM_IP + "/magento_2/prefix_clear/admin/m2epro/wizard_installationAmazon/afterGetTokenAutomatic/?Merchant=A1VHQHEVZ1GTIX&Marketplace=A1AM78C64UM0Y8&MWSAuthToken=amzn.mws.bca3f75c-a693-49c7-6da0-649e33313dfb&Signature=VAkK4rRdGpgI%2F1nlIB8U9oNKv7lDV0JSoXM6ekBHsUE%3D&SignedString=POST%0D%0Ahttps%3A%2F%2Fm2epro.com%2Faccept-a-na.php%0D%0A%3Fback_url%3DaHR0cDovLzEwLjAuMzAuMTIyL21hZ2VudG9fMi9wcmVmaXhfY2xlYXIvYWRtaW4vbTJlcHJvL3dpemFyZF9pbnN0YWxsYXRpb25BbWF6b24vYWZ0ZXJHZXRUb2tlbkF1dG9tYXRpYy8%3D%0D%0AAWSAccessKeyId%3DAKIAJUNZPBN3EXTI3FCQ%26MWSAuthToken%3Damzn.mws.bca3f75c-a693-49c7-6da0-649e33313dfb%26Marketplace%3DA1AM78C64UM0Y8%26Merchant%3DA1VHQHEVZ1GTIX%26SignatureMethod%3DHmacSHA256%26SignatureVersion%3D2")
