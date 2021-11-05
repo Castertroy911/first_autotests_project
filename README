@@ -27,4 +27,15 @@ In the two_step_auth you need to write code for the two step verification which 
 3. In file local_config.py change VM_IP on your Virtual Machine IP (10.0.30.XXX)
 4. Install required packages with the command: pip install -r requirements.txt
 5. Open Terminal and go to the autotests directory.
-6. Run autotest with the command: pytest -v --tb=line test_walmart_wizard.py
+6. Run autotest with the command: pytest --tb=short -v -m ebay_policy -W ignore(
+    --tb=short - это более короткий вывод информации, если вдруг тест упал
+    -m [после него должно идти название маркера тех автотестов, которые хотите запустить]
+                                                            - запускает тесты с определенной маркировкой
+    -W ignore - иногда pytest может кидать стандартные ворнинги, которые никак не влияют на работу.
+                                                             флаг -W ignore убирает эти ворнинги из вывода
+    -v (verbose). то есть подробный - используется для отображения % пройденных тестов и
+                                                              вывода информации о Passed or Failed)
+
+    Список других полезных команд для манипуляции выводом: https://gist.github.com/amatellanes/12136508b816469678c2
+
+
