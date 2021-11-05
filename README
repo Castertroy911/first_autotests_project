@@ -24,10 +24,11 @@ In the user_id_ebay and user_secret_ebay you need to write credentials for eBay.
 In the user_id_amazon and user_secret_amazon you need to write credentials for Amazon.
 In the two_step_auth you need to write code for the two step verification which is required during amazon account on-boarding
 
-3. In file local_config.py change VM_IP on your Virtual Machine IP (10.0.30.XXX)
-4. Install required packages with the command: pip install -r requirements.txt
-5. Open Terminal and go to the autotests directory.
-6. Run autotest with the command: pytest --tb=short -v -m ebay_policy -W ignore(
+3. In file m2/config/local_config.py change VM_IP on your Virtual Machine IP (10.0.30.XXX)
+4. Install python 3.6 or higher.
+5. Install required packages with the command: pip install -r requirements.txt
+6. Open Terminal and go to the autotests directory.
+7. Run autotest with the command: pytest --tb=short -v -m ebay_policy -W ignore(
     --tb=short - это более короткий вывод информации, если вдруг тест упал
     -m [после него должно идти название маркера тех автотестов, которые хотите запустить]
                                                             - запускает тесты с определенной маркировкой
