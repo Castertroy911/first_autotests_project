@@ -82,11 +82,3 @@ class TestPolicy():
         is_element_selected("#return_international_option>[value='MoneyBackOrReplacement']", "Changes not saved", browser)
         is_element_selected("#return_international_within>[value='Days_30']", "Changes not saved", browser)
         is_element_selected("#return_international_shipping_cost>[value='Seller']", "Changes not saved", browser)
-
-
-
-
-
-
-
-
