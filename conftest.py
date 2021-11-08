@@ -10,7 +10,7 @@ from selenium.common.exceptions import TimeoutException
 
 
 @pytest.fixture(scope='module')
-def browser(self):
+def browser():
     with webdriver.Chrome() as driver:
         driver.implicitly_wait(5)
         driver.get(magento_base_url)
