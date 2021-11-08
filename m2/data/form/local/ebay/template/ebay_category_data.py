@@ -9,3 +9,9 @@ payment_mail = "admin@admin.com"
 # Return Policy
 return_title = "Auto Created Return Policy"
 return_marketplace = "United States"
+
+# Selling Policy
+selling_title = "Auto Created Selling Policy"
+taxation_vat_rate = "25"
+quantity_value = "1"
+
