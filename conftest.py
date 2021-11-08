@@ -2,8 +2,11 @@ import pytest
 from selenium import webdriver
 from m2.config.local_config import *
 from Credentials.credentials_magento import *
-import time
 from selenium.webdriver.common.by import By
+import time
+from selenium.webdriver.support.ui import Select
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import TimeoutException
 
 
 @pytest.fixture(scope='module')
