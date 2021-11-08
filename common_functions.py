@@ -26,7 +26,8 @@ def is_element_disabled(selector, browser):
 
 # Позволяет быстро проверить, выбрано ли в дроп-дауне значение по умолчанию
 def is_element_selected(selector, message, browser):
-    assert browser.find_element(By.CSS_SELECTOR, selector).get_attribute("selected"), message
+    assert browser.find_element(
+        By.CSS_SELECTOR, selector).get_attribute("selected"), message
 
 
 # Позволяет быстро проверить, скрыт ли сейчас элемент на странице
