@@ -58,7 +58,7 @@ class TestWizard():
 
         button = wait("#continue", browser)
 
-        login = amazon_log_in(user_id_amazon, user_secret_amazon, two_step_auth, browser)
+        amazon_log_in(user_id_amazon, user_secret_amazon, two_step_auth, browser)
 
         # Третий шаг визарда
         asin = Select(browser.find_element(By.ID, "general_id"))

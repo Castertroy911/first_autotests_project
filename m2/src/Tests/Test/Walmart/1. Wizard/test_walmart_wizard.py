@@ -55,7 +55,7 @@ class TestWizard():
         marketplace = Select(browser.find_element(By.ID, "marketplace_id"))
         marketplace.select_by_visible_text("United States")
 
-        login_wlm = walmart_log_in(user_id_walmart, user_secret_walmart, browser)
+        walmart_log_in(user_id_walmart, user_secret_walmart, browser)
 
         button = wait("#continue", browser)
 

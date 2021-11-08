@@ -53,7 +53,7 @@ class TestWizard():
 
         button = wait("#continue", browser)
 
-        login = ebay_log_in(user_id_ebay, user_secret_ebay, browser)
+        ebay_log_in(user_id_ebay, user_secret_ebay, browser)
 
         # Третий шаг визарда
         upc = Select(browser.find_element(By.ID, "product_identifier_upc"))
