@@ -18,6 +18,3 @@ def browser(self):
         button = driver.find_element(By.CLASS_NAME, "action-login")
         button.click()
         yield driver
-
-
-
