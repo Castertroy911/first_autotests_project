@@ -6,7 +6,6 @@ from common_functions import *
 
 @pytest.mark.ebay_policy
 @pytest.mark.policies
-@pytest.mark.returnpolicy
 class TestPolicy():
     def test_return_policy(self, browser):
         browser.get(ebay_policy_url)
