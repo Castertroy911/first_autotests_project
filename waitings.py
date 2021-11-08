@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 
 
 def wait_presence_of_element(selector, browser):
-    located_element = WebDriverWait(browser, 10).until(
+    located_element = WebDriverWait(browser, 5).until(
         EC.presence_of_element_located((By.CSS_SELECTOR, selector)))
     located_element.click()
 
