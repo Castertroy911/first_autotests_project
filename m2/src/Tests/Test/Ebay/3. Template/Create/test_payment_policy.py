@@ -26,7 +26,7 @@ class TestPolicy():
         wait_presence_of_element("#save_and_continue-button", browser)
 
         # Проверяем что первый выбранный метод оплаты сохранился
-        is_element_selected("#managed_payments_mode", browser)
+        is_element_checked("#managed_payments_mode", browser)
 
         # Проверяем, что все остальные методы оплаты теперь неактивны
         is_element_disabled("#pay_pal_mode", browser)
@@ -83,15 +83,15 @@ class TestPolicy():
         wait_presence_of_element("#save_and_continue-button", browser)
 
         # Проверяем, что после сохранения, все выбранные способы оплаты сохранились
-        is_element_selected("#pay_pal_mode", browser)
-        is_element_selected("#payment_methods_MOCC", browser)
-        is_element_selected("#payment_methods_PersonalCheck", browser)
-        is_element_selected("#payment_methods_VisaMC", browser)
-        is_element_selected("#payment_methods_AmEx", browser)
-        is_element_selected("#payment_methods_Discover", browser)
-        is_element_selected("#payment_methods_PaymentSeeDescription", browser)
-        is_element_selected("#payment_methods_IntegratedMerchantCreditCard", browser)
-        is_element_selected("#payment_methods_CashOnPickup", browser)
+        is_element_checked("#pay_pal_mode", browser)
+        is_element_checked("#payment_methods_MOCC", browser)
+        is_element_checked("#payment_methods_PersonalCheck", browser)
+        is_element_checked("#payment_methods_VisaMC", browser)
+        is_element_checked("#payment_methods_AmEx", browser)
+        is_element_checked("#payment_methods_Discover", browser)
+        is_element_checked("#payment_methods_PaymentSeeDescription", browser)
+        is_element_checked("#payment_methods_IntegratedMerchantCreditCard", browser)
+        is_element_checked("#payment_methods_CashOnPickup", browser)
 
 
 
