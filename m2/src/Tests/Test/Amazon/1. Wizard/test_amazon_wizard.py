@@ -13,7 +13,7 @@ class TestWizard():
         # Начинаем прохождение визарда Walmart
         browser.get("http://" + VM_IP + "/magento_2/prefix_clear/admin/m2epro/wizard_installationAmazon/")
         try:
-            close = wait(".action", browser)
+            close = wait_presence_of_element(".action", browser)
         except TimeoutException as err:
             pass
 
@@ -46,9 +46,9 @@ class TestWizard():
             postal_code.clear()
             postal_code.send_keys("90034")
 
-            agreement = wait("[value = '1']", browser)
+            agreement = wait_presence_of_element("[value = '1']", browser)
 
-            next_step = wait("#continue", browser)
+            next_step = wait_presence_of_element("#continue", browser)
         except NoSuchElementException as err:
             pass
 
@@ -56,7 +56,7 @@ class TestWizard():
         marketplace = Select(browser.find_element(By.ID, "marketplace_id"))
         marketplace.select_by_visible_text("United States")
 
-        button = wait("#continue", browser)
+        button = wait_presence_of_element("#continue", browser)
 
         amazon_log_in(user_id_amazon, user_secret_amazon, two_step_auth, browser)
 
@@ -68,6 +68,6 @@ class TestWizard():
         ean.select_by_visible_text("EAN")
         time.sleep(1)
 
-        button = wait("#continue", browser)
+        button = wait_presence_of_element("#continue", browser)
 
-        button = wait("#skip", browser)
+        button = wait_presence_of_element("#skip", browser)

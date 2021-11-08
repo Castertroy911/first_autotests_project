@@ -5,12 +5,12 @@ from m2.config.local_config import *
 
 def ebay_log_in(a, b, browser):
     try:
-        switch_acc = wait("#switch-account-anchor", browser)
+        switch_acc = wait_presence_of_element("#switch-account-anchor", browser)
     except TimeoutException as err:
         pass
     user = browser.find_element(By.ID, "userid")
     user.send_keys(a)
-    button = wait("#signin-continue-btn", browser)
+    button = wait_presence_of_element("#signin-continue-btn", browser)
     password = browser.find_element(By.ID, "pass")
     password.clear()
     password.send_keys(b)
