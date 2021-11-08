@@ -23,15 +23,15 @@ class TestPolicy():
         wait_presence_of_element("#save_and_continue-button", browser)
 
         # Проверяем, что все значения установлены по умолчанию
-        is_element_selected("#return_accepted>[value='ReturnsAccepted']",\
+        is_element_selected("#return_accepted>[value='ReturnsAccepted']",
                             "Something wrong with Return Policy", browser)
-        is_element_selected("#return_option>[value='MoneyBack']",\
+        is_element_selected("#return_option>[value='MoneyBack']",
                             "Something wrong with Refund Will Be Given As", browser)
-        is_element_selected("#return_within>[value='Days_14']",\
+        is_element_selected("#return_within>[value='Days_14']",
                             "Something wrong with Item Must Be Returned Within", browser)
-        is_element_selected("#return_shipping_cost>[value='Buyer']",\
+        is_element_selected("#return_shipping_cost>[value='Buyer']",
                             "Something wrong with Return Shipping Will Be Paid By", browser)
-        is_element_selected("#return_international_accepted>[value='ReturnsNotAccepted']",\
+        is_element_selected("#return_international_accepted>[value='ReturnsNotAccepted']",
                             "Something wrong with International Returns>Return Policy", browser)
 
         # Проверяем, что все остальные элементы (в разделе International returns) скрыты
