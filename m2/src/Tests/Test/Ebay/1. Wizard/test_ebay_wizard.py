@@ -8,9 +8,9 @@ from selenium.common.exceptions import NoSuchElementException
 @pytest.mark.wizard
 class TestWizard():
     def test_ebay_wizard(self, browser):
-        ebay = browser.get("http://" + VM_IP + "/magento_2/prefix_clear/admin/m2epro/wizard_installationEbay/")
+        browser.get("http://" + VM_IP + "/magento_2/prefix_clear/admin/m2epro/wizard_installationEbay/")
         try:
-            close = wait_presence_of_element(".action", browser)
+            wait_presence_of_element(".action", browser)
         except TimeoutException as err:
             pass
 
@@ -42,16 +42,16 @@ class TestWizard():
             postal_code.clear()
             postal_code.send_keys("90034")
 
-            agreement = wait_presence_of_element("[value = '1']", browser)
+            wait_presence_of_element("[value = '1']", browser)
 
-            next_step = wait_presence_of_element("#continue", browser)
+            wait_presence_of_element("#continue", browser)
         except NoSuchElementException as err:
             pass
 
         # Второй шаг визарда
-        account = wait_presence_of_element("#modesandbox", browser)
+        wait_presence_of_element("#modesandbox", browser)
 
-        button = wait_presence_of_element("#continue", browser)
+        wait_presence_of_element("#continue", browser)
 
         ebay_log_in(user_id_ebay, user_secret_ebay, browser)
 
@@ -62,7 +62,7 @@ class TestWizard():
         ean = Select(browser.find_element(By.ID, "product_identifier_ean"))
         ean.select_by_visible_text("EAN")
 
-        button = wait_presence_of_element("#continue", browser)
+        wait_presence_of_element("#continue", browser)
 
-        skip = wait_presence_of_element("#skip", browser)
+        wait_presence_of_element("#skip", browser)
 

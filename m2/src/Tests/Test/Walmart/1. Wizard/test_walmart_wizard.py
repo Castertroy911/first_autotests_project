@@ -1,6 +1,5 @@
 from login_wlm import *
 from Credentials.credentials_walmart import *
-from selenium.webdriver.support.ui import Select
 from conftest import *
 from waitings import *
 
@@ -11,7 +10,7 @@ class TestWizard():
         # Начинаем прохождение визарда Walmart
         browser.get("http://" + VM_IP + "/magento_2/prefix_clear/admin/m2epro/wizard_installationWalmart/")
         try:
-            close = wait_presence_of_element(".action", browser)
+            wait_presence_of_element(".action", browser)
         except TimeoutException as err:
             pass
 
@@ -44,9 +43,9 @@ class TestWizard():
             postal_code.clear()
             postal_code.send_keys("90034")
 
-            agreement = wait_presence_of_element("[value = '1']", browser)
+            wait_presence_of_element("[value = '1']", browser)
 
-            next_step = wait_presence_of_element("#continue", browser)
+            wait_presence_of_element("#continue", browser)
         except NoSuchElementException as err:
             pass
 
@@ -57,14 +56,14 @@ class TestWizard():
 
         walmart_log_in(user_id_walmart, user_secret_walmart, browser)
 
-        button = wait_presence_of_element("#continue", browser)
+        wait_presence_of_element("#continue", browser)
 
         # Третий шаг визарда
-        upc = wait_presence_of_element("#upc_mode [attribute_code = 'upc']", browser)
+        wait_presence_of_element("#upc_mode [attribute_code = 'upc']", browser)
 
-        ean = wait_presence_of_element("#ean_mode [attribute_code = 'ean']", browser)
+        wait_presence_of_element("#ean_mode [attribute_code = 'ean']", browser)
         time.sleep(1)
 
-        next = wait_presence_of_element("#continue", browser)
+        wait_presence_of_element("#continue", browser)
 
-        button = wait_presence_of_element("#skip", browser)
+        wait_presence_of_element("#skip", browser)
