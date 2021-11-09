@@ -1,5 +1,3 @@
-import time
-
 from waitings import *
 from conftest import *
 from m2.data.form.local.ebay.template.ebay_category_data import *
