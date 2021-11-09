@@ -161,4 +161,3 @@ class TestPolicy():
         is_element_selected("#reserve_price_mode>[value='0']", "Changes aren't saved", browser)
         is_element_selected("#buyitnow_price_mode>[value='0']", "Changes aren't saved", browser)
         is_element_invisible("#best_offer_mode", browser)
-
