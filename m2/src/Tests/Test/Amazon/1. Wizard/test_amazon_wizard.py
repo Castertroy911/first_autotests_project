@@ -60,14 +60,4 @@ class TestWizard():
 
         amazon_log_in(user_id_amazon, user_secret_amazon, two_step_auth, browser)
 
-        # Третий шаг визарда
-        asin = Select(browser.find_element(By.ID, "general_id"))
-        asin.select_by_visible_text("ASIN")
-
-        ean = Select(browser.find_element(By.ID, "worldwide_id"))
-        ean.select_by_visible_text("EAN")
-        time.sleep(1)
-
-        wait_presence_of_element("#continue", browser)
-
         wait_presence_of_element("#skip", browser)

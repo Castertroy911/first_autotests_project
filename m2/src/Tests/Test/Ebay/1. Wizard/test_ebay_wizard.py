@@ -55,14 +55,5 @@ class TestWizard():
 
         ebay_log_in(user_id_ebay, user_secret_ebay, browser)
 
-        # Третий шаг визарда
-        upc = Select(browser.find_element(By.ID, "product_identifier_upc"))
-        upc.select_by_visible_text("UPC")
-
-        ean = Select(browser.find_element(By.ID, "product_identifier_ean"))
-        ean.select_by_visible_text("EAN")
-
-        wait_presence_of_element("#continue", browser)
-
         wait_presence_of_element("#skip", browser)
 
