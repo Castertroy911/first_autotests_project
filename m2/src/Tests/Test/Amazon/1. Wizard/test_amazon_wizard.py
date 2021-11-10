@@ -8,6 +8,7 @@ from selenium.common.exceptions import TimeoutException
 
 
 @pytest.mark.wizard
+@pytest.mark.amazon_wizard
 class TestWizard():
     def  test_amazon_wizard(self, browser):
         # Начинаем прохождение визарда Walmart

@@ -5,6 +5,7 @@ from waitings import *
 
 
 @pytest.mark.wizard
+@pytest.mark.walmart_wizard
 class TestWizard():
     def test_walmart_wizard(self, browser):
         # Начинаем прохождение визарда Walmart

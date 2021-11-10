@@ -6,6 +6,7 @@ from selenium.common.exceptions import NoSuchElementException
 
 
 @pytest.mark.wizard
+@pytest.mark.ebay_wizard
 class TestWizard():
     def test_ebay_wizard(self, browser):
         browser.get("http://" + VM_IP + "/magento_2/prefix_clear/admin/m2epro/wizard_installationEbay/")
