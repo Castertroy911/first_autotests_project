@@ -1,23 +1,20 @@
 import pytest
 from selenium import webdriver
+from locators import LoginPageLocators
 from m2.config.local_config import *
 from Credentials.credentials_magento import *
-from selenium.webdriver.common.by import By
 import time
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.common.exceptions import TimeoutException
 
 
-@pytest.fixture(scope='module')
+@pytest.fixture(scope='class')
 def browser():
-    with webdriver.Chrome() as driver:
-        driver.implicitly_wait(5)
-        driver.get(magento_base_url)
-        name = driver.find_element(By.ID, "username")
-        name.send_keys(user_name)
-        password = driver.find_element(By. ID, "login")
-        password.send_keys(user_password)
-        button = driver.find_element(By.CLASS_NAME, "action-login")
-        button.click()
-        yield driver
+    browser = webdriver.Chrome()
+    browser.get(magento_base_url)
+    name = browser.find_element(*LoginPageLocators.USER_NAME)
+    name.send_keys(user_name)
+    password = browser.find_element(*LoginPageLocators.USER_PASSWORD)
+    password.send_keys(user_password)
+    button = browser.find_element(*LoginPageLocators.CONFIRM_BUTTON)
+    button.click()
+    yield browser
+    browser.quit()

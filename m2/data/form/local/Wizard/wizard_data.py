@@ -1,0 +1,7 @@
+email_data = "admin@admin.com"
+first_name_data = "admin"
+last_name_data = "admin"
+phone_data = "1231234567"
+country_data = "United States"
+city_data = "city"
+postal_code_data = "90034"
