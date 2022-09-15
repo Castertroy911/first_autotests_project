@@ -7,7 +7,7 @@ from locators import EbayWizardLocators
 class TestWizardEbay:
     def test_first_wizard_step_ebay(self, browser):
         page = EbayWizardPage(browser, browser.current_url)
-        page.user_can_go_to_ebay()
+        page.user_go_to_ebay()
         page.wizard_first_step()
 
     def test_second_wizard_step_ebay(self, browser):

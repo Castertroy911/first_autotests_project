@@ -6,7 +6,7 @@ from Credentials.credentials_ebay import *
 
 class EbayWizardPage(WizardPage):
     def second_wizard_step(self):
-        mode = self.wait_for_element_and_click(*EbayWizardLocators.SANDBOX_MODE)
+        self.wait_for_element_and_click(*EbayWizardLocators.SANDBOX_MODE)
 
         continue_button = self.browser.find_element(*EbayWizardLocators.CONTINUE)
         continue_button.click()

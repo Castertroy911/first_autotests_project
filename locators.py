@@ -12,6 +12,8 @@ class BasePageLocators:
     AMAZON_LINK = (By.CSS_SELECTOR, "#menu-ess-m2epro-amazon>a")
     WALMART_LINK = (By.CSS_SELECTOR, "#menu-ess-m2epro-walmart>a")
     PROGRESS_BAR_PERCENTAGE = (By.CSS_SELECTOR, "#marketplaces_progress_bar_percents")
+    EBAY_POLICIES_PAGE = (By.CSS_SELECTOR, ".item-ebay-configuration-templates ")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "[data-ui-id='messages-message-success']")
 
 
 class WizardFirstStepLocators:
@@ -71,7 +73,6 @@ class EbayMarketplaceUpdatePageLocators:
     EBAY_MOTORS = (By.CSS_SELECTOR, "#status_9")
     SAVE = (By.CSS_SELECTOR, "#run_save_and_synch")
     UPDATE_ALL = (By.CSS_SELECTOR, "#run_update_all")
-    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "[data-ui-id='messages-message-success']")
 
     UNITED_STATES_ENABLED = (By.CSS_SELECTOR, "#status_1 > [value = '1']")
     CANADA_ENABLED = (By.CSS_SELECTOR, "#status_2 > [value = '1']")
@@ -118,3 +119,18 @@ class EbayMarketplaceUpdatePageLocators:
     # PHILIPPINES_COMPLETED = (By.CSS_SELECTOR, "#synch_info_complete_20")
     # SINGAPORE_COMPLETED = (By.CSS_SELECTOR, "#synch_info_complete_22")
     # EBAY_MOTORS_COMPLETED = (By.CSS_SELECTOR, "#synch_info_complete_9")
+
+
+class PoliciesPageLocators:
+    ADD_BUTTON = (By.CSS_SELECTOR, ".add")
+    ADD_SHIPPING_POLICY = (By.CSS_SELECTOR, "#add_policy-shipping")
+
+
+class EbayShippingPolicyLocators:
+    TITLE = (By.CSS_SELECTOR, "#title")
+    US_MARKETPLACE = (By.CSS_SELECTOR, "#marketplace_id")
+    ADD_SHIPPING_METHOD_BUTTON = (By.CSS_SELECTOR, "#add_local_shipping_method>.add")
+    SHIPPING_SERVICE = (By.CSS_SELECTOR, ".shipping-service")
+    ITEM_LOCATION_TAB = (By.CSS_SELECTOR, ".admin__collapsible-title")
+    COST = (By.CSS_SELECTOR, ".cost-mode")
+    SAVE_AND_CONTINUE_BUTTON = (By.CSS_SELECTOR, "#save_and_continue-button")
