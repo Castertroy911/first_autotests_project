@@ -29,7 +29,17 @@ class EbayShippingPolicyPage(PoliciesPage):
     def add_shipping_method(self):
         self.wait_for_element_and_click(*EbayShippingPolicyLocators.ADD_SHIPPING_METHOD_BUTTON)
         self.select_element_by_text(shipping_service, *EbayShippingPolicyLocators.SHIPPING_SERVICE)
-        text = self.text_present_in_attribute("style", *EbayShippingPolicyLocators.COST)
+        self.select_element_by_value("1", *EbayShippingPolicyLocators.COST_MODE)
+        cost = self.browser.find_element(*EbayShippingPolicyLocators.COST)
+        cost.clear()
+        cost.send_keys(cost_value)
+        additional_cost = self.browser.find_element(*EbayShippingPolicyLocators.ADDITIONAL_COST)
+        additional_cost.clear()
+        additional_cost.send_keys(additional_cost_value)
+        priority = self.browser.find_element(*EbayShippingPolicyLocators.PRIORITY)
+        priority.clear()
+        priority.send_keys(priority_value)
+        text = self.text_present_in_attribute("style", *EbayShippingPolicyLocators.COST_MODE)
         assert "none" not in text, "Mode isn't active for user"
 
     def save_and_continue(self):
@@ -42,5 +52,5 @@ class EbayShippingPolicyPage(PoliciesPage):
         title = self.text_present_in_attribute("value", *EbayShippingPolicyLocators.TITLE)
         assert title == self.policy_title, f"Title saved incorrect"
 
-
-        
+        selected_marketplace = self.browser.find_element(*EbayShippingPolicyLocators.SELECTED_MARKETPLACE)
+        assert selected_marketplace.get_attribute("selected") is not None, f"{us_marketplace} marketplace isn't selected"
