@@ -124,6 +124,7 @@ class EbayMarketplaceUpdatePageLocators:
 class PoliciesPageLocators:
     ADD_BUTTON = (By.CSS_SELECTOR, ".add")
     ADD_SHIPPING_POLICY = (By.CSS_SELECTOR, "#add_policy-shipping")
+    ADD_SYNCHRONIZATION_POLICY = (By.CSS_SELECTOR, "#add_policy-synchronization")
 
 
 class EbayShippingPolicyLocators:
@@ -138,3 +139,25 @@ class EbayShippingPolicyLocators:
     COST = (By.CSS_SELECTOR, ".shipping-cost-cv")
     ADDITIONAL_COST = (By.CSS_SELECTOR, ".shipping-cost-additional")
     PRIORITY = (By.CSS_SELECTOR, ".shipping-priority")
+
+
+class EbaySynchronizationPolicyLocators:
+    TITLE = (By.CSS_SELECTOR, "#title")
+    LIST_MODE = (By.CSS_SELECTOR, "#list_mode")
+    LIST_MODE_STATUS = (By.CSS_SELECTOR, "#list_mode>[value = '1']")
+    REVISE_TAB = (By.CSS_SELECTOR, "[name = 'revise_rules']")
+    REVISE_PRICE = (By.CSS_SELECTOR, "#revise_update_price>[value = '1']")
+    REVISE_TITLE = (By.CSS_SELECTOR, "#revise_update_title>[value = '1']")
+    REVISE_SUBTITLE = (By.CSS_SELECTOR, "#revise_update_sub_title>[value = '1']")
+    REVISE_DESCRIPTION = (By.CSS_SELECTOR, "#revise_update_description>[value = '1']")
+    REVISE_IMAGES = (By.CSS_SELECTOR, "#revise_update_images>[value = '1']")
+    REVISE_CATEGORIES = (By.CSS_SELECTOR, "#revise_update_categories>[value = '1']")
+    REVISE_EBAY_PARTS_COMPATIBILITY = (By.CSS_SELECTOR, "#revise_update_parts>[value = '1']")
+    REVISE_SHIPPING = (By.CSS_SELECTOR, "#revise_update_shipping>[value = '1']")
+    REVISE_RETURN = (By.CSS_SELECTOR, "#revise_update_return>[value = '1']")
+    REVISE_OTHER = (By.CSS_SELECTOR, "#revise_update_other>[value = '1']")
+    RELIST_TAB = (By.CSS_SELECTOR, "[name = 'relist_rules']")
+    RELIST_MODE = (By.CSS_SELECTOR, "#relist_mode>[value = '1']")
+    STOP_TAB = (By.CSS_SELECTOR, "[name = 'stop_rules']")
+    STOP_MODE = (By.CSS_SELECTOR, "#stop_mode>[value = '1']")
+    SAVE_AND_CONTINUE = (By.CSS_SELECTOR, "#save_and_continue-button")

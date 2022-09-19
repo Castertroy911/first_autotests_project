@@ -9,3 +9,6 @@ shipping_service = "Standard Shipping"
 cost_value = "10"
 additional_cost_value = "10"
 priority_value = "1"
+
+# Synchronization Policy
+synchronization_policy_title = f"Synchronization Policy (autotest) created {current_date}"
