@@ -11,7 +11,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_us_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.UNITED_STATES)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.UNITED_STATES_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.UNITED_STATES_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         time.sleep(1)
         save.click()
@@ -23,7 +23,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_canada_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.CANADA)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.CANADA_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.CANADA_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -34,7 +34,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_canada_french_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.CANADA_FRENCH)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.CANADA_FRENCH_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.CANADA_FRENCH_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -45,7 +45,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_uk_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.UNITED_KINGDOM)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.UNITED_KINGDOM_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.UNITED_KINGDOM_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -56,7 +56,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_germany_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.GERMANY)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.GERMANY_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.GERMANY_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -67,7 +67,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_austria_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.AUSTRIA)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.AUSTRIA_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.AUSTRIA_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -78,7 +78,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_belgium_dutch_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.BELGIUM_DUTCH)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.BELGIUM_DUTCH_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.BELGIUM_DUTCH_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -89,7 +89,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_belgium_french_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.BELGIUM_FRENCH)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.BELGIUM_FRENCH_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.BELGIUM_FRENCH_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -100,7 +100,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_france_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.FRANCE)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.FRANCE_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.FRANCE_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -111,7 +111,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_ireland_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.IRELAND)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.IRELAND_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.IRELAND_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -122,7 +122,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_italy_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.ITALY)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.ITALY_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.ITALY_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -133,7 +133,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_netherlands_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.NETHERLANDS)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.NETHERLANDS_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.NETHERLANDS_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -144,7 +144,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_poland_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.POLAND)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.POLAND_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.POLAND_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -155,7 +155,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_spain_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.SPAIN)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.SPAIN_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.SPAIN_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -165,7 +165,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_switzerland_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.SWITZERLAND)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.SWITZERLAND_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.SWITZERLAND_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -176,7 +176,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_australia_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.AUSTRALIA)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.AUSTRALIA_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.AUSTRALIA_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -187,7 +187,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_hong_kong_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.HONG_KONG)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.HONG_KONG_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.HONG_KONG_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -198,7 +198,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_india_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.INDIA)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.INDIA_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.INDIA_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -209,7 +209,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_malaysia_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.MALAYSIA)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.MALAYSIA_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.MALAYSIA_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -220,7 +220,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_philippines_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.PHILIPPINES)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.PHILIPPINES_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.PHILIPPINES_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -231,7 +231,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_singapore_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.SINGAPORE)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.SINGAPORE_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.SINGAPORE_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)
@@ -242,7 +242,7 @@ class EbayMarketplaceUpdatePage(Helper):
 
     def update_ebay_motors_marketplace(self):
         self.select_element_by_value("1", *EbayMarketplaceUpdatePageLocators.EBAY_MOTORS)
-        self.check_element_enabled(*EbayMarketplaceUpdatePageLocators.EBAY_MOTORS_ENABLED)
+        self.is_element_selected(*EbayMarketplaceUpdatePageLocators.EBAY_MOTORS_ENABLED)
         save = self.browser.find_element(*EbayMarketplaceUpdatePageLocators.SAVE)
         save.click()
         self.visibility_of_element(*BasePageLocators.PROGRESS_BAR_PERCENTAGE)

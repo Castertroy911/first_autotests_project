@@ -11,18 +11,18 @@ class BasePage:
     def open(self):
         self.browser.get(self.url)
 
-    def user_go_to_ebay(self):
+    def open_ebay_tab(self):
         ebay = self.browser.find_element(*BasePageLocators.EBAY_LINK)
         ebay.click()
 
-    def user_go_to_policies_page(self):
+    def go_to_policies_page(self):
         policies = self.browser.find_element(*BasePageLocators.EBAY_POLICIES_PAGE)
         policies.click()
 
-    def user_can_go_to_amazon(self):
+    def open_amazon_tab(self):
         amazon = self.browser.find_element(*BasePageLocators.AMAZON_LINK)
         amazon.click()
 
-    def user_can_go_to_walmart(self):
+    def open_walmart_tab(self):
         walmart = self.browser.find_element(*BasePageLocators.WALMART_LINK)
         walmart.click()

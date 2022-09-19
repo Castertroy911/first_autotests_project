@@ -36,8 +36,13 @@ class Helper(BasePage):
         except NoSuchElementException:
             assert NoSuchElementException is False, f"Element with a value {value} is not enabled for selecting"
 
-    def check_element_enabled(self, method, selector):
-        assert self.browser.find_element(method, selector).get_attribute("selected"), "Element isn't enabled"
+    def is_element_selected(self, method, selector):
+        assert self.browser.find_element(method, selector).get_attribute("selected"), "Element isn't selected, but it" \
+                                                                                      " should be"
+
+    def is_element_deselected(self, method, selector):
+        assert self.browser.find_element(method, selector).get_attribute("selected") is None, "Element is selected, " \
+                                                                                              "but is shouldn't be"
 
     def is_element_present(self, method, selector):
         try:
