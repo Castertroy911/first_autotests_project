@@ -7,15 +7,15 @@ from selenium.common.exceptions import *
 class EbayShippingPolicyPage(PoliciesPage):
     policy_title = shipping_policy_title
 
-    def only_general_tab_is_visible(self):
-        item_location_tab = self.is_element_present(*EbayShippingPolicyLocators.ITEM_LOCATION_TAB)
-        assert item_location_tab is False, f"All tabs are visible before selecting a Marketplace, but it shouldn't"
-
     def add_shipping_policy(self):
         try:
             self.add_policy(*PoliciesPageLocators.ADD_BUTTON, *PoliciesPageLocators.ADD_SHIPPING_POLICY)
         except TimeoutException:
             self.add_policy(*PoliciesPageLocators.ADD_BUTTON, *PoliciesPageLocators.ADD_SHIPPING_POLICY)
+
+    def only_general_tab_is_visible(self):
+        item_location_tab = self.is_element_present(*EbayShippingPolicyLocators.ITEM_LOCATION_TAB)
+        assert item_location_tab is False, f"All tabs are visible before selecting a Marketplace, but it shouldn't"
 
     def fill_in_general_information(self):
         title = self.wait_for_element(*EbayShippingPolicyLocators.TITLE)
