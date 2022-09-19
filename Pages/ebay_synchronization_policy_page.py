@@ -1,11 +1,10 @@
-from policies_page import PoliciesPage
+from Pages.policies_page import PoliciesPage
 from locators import *
 from m2.data.form.local.Policies.policies_data import *
 
 
 class EbaySynchronizationPolicyPage(PoliciesPage):
     def add_synchronization_policy(self):
-        self.go_to_policies_page()
         self.add_policy(*PoliciesPageLocators.ADD_SYNCHRONIZATION_POLICY)
 
     def fill_general_information(self):
@@ -39,7 +38,7 @@ class EbaySynchronizationPolicyPage(PoliciesPage):
     def save_and_continue(self):
         self.wait_for_element_and_click(*EbaySynchronizationPolicyLocators.SAVE_AND_CONTINUE)
         message = self.wait_for_element(*BasePageLocators.SUCCESS_MESSAGE)
-        message = message.text()
+        message = message.text
         assert message == "Policy was saved.", f"Synchronization Policy wasn't saved, but it should be"
 
     def check_fields_after_saving(self):

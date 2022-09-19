@@ -1,6 +1,8 @@
 from Pages.ebay_synchronization_policy_page import EbaySynchronizationPolicyPage
+import pytest
 
 
+@pytest.mark.ebay_synchronization_policy
 class TestEbaySynchronizationPolicy:
     def test_ebay_synchronization_policy(self, browser):
         page = EbaySynchronizationPolicyPage(browser, browser.current_url)

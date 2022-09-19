@@ -1,5 +1,4 @@
 import pytest
-
 from Pages.ebay_shipping_policy_page import EbayShippingPolicyPage
 
 
