@@ -15,7 +15,7 @@ class BasePage:
         ebay = self.browser.find_element(*BasePageLocators.EBAY_LINK)
         ebay.click()
 
-    def go_to_policies_page(self):
+    def go_to_ebay_policies_page(self):
         policies = self.browser.find_element(*BasePageLocators.EBAY_POLICIES_PAGE)
         policies.click()
 

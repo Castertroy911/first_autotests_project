@@ -7,7 +7,7 @@ class TestEbayShippingPolicy:
     def test_ebay_shipping_policy(self, browser):
         page = EbayShippingPolicyPage(browser, browser.current_url)
         page.open_ebay_tab()
-        page.go_to_policies_page()
+        page.go_to_ebay_policies_page()
         page.add_shipping_policy()
         page.only_general_tab_is_visible()
         page.fill_in_general_information()

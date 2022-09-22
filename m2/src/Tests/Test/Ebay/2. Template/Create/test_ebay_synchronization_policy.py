@@ -7,7 +7,7 @@ class TestEbaySynchronizationPolicy:
     def test_ebay_synchronization_policy(self, browser):
         page = EbaySynchronizationPolicyPage(browser, browser.current_url)
         page.open_ebay_tab()
-        page.go_to_policies_page()
+        page.go_to_ebay_policies_page()
         page.add_synchronization_policy()
         page.fill_general_information()
         page.list_rules()

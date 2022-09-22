@@ -6,7 +6,7 @@ import pytest
 class TestEbayMarketplacesUpdate:
     def test_us_marketplaces_update(self, browser):
         page = EbayMarketplaceUpdatePage(browser, browser.current_url)
-        page.user_can_go_to_ebay()
+        page.open_ebay_tab()
         page.go_to_ebay_marketplaces_page()
         page.update_us_marketplace()
 
