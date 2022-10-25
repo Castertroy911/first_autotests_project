@@ -9,9 +9,9 @@ class EbayShippingPolicyPage(PoliciesPage):
 
     def add_shipping_policy(self):
         try:
-            self.add_policy(*PoliciesPageLocators.ADD_BUTTON, *PoliciesPageLocators.ADD_SHIPPING_POLICY)
+            self.add_policy(*PoliciesPageLocators.ADD_SHIPPING_POLICY)
         except TimeoutException:
-            self.add_policy(*PoliciesPageLocators.ADD_BUTTON, *PoliciesPageLocators.ADD_SHIPPING_POLICY)
+            self.add_policy(*PoliciesPageLocators.ADD_SHIPPING_POLICY)
 
     def only_general_tab_is_visible(self):
         item_location_tab = self.is_element_present(*EbayShippingPolicyLocators.ITEM_LOCATION_TAB)
@@ -21,7 +21,7 @@ class EbayShippingPolicyPage(PoliciesPage):
         title = self.wait_for_element(*EbayShippingPolicyLocators.TITLE)
         title.send_keys(self.policy_title)
 
-        self.select_element_by_text(us_marketplace, *EbayShippingPolicyLocators.US_MARKETPLACE)
+        self.select_element_by_text(us_marketplace_shipping, *EbayShippingPolicyLocators.US_MARKETPLACE)
 
         item_location_tab = self.is_element_present(*EbayShippingPolicyLocators.ITEM_LOCATION_TAB)
         assert item_location_tab is True, f"All tabs aren't visible after selecting Marketplace, but is should be"
@@ -53,4 +53,4 @@ class EbayShippingPolicyPage(PoliciesPage):
         assert title == self.policy_title, f"Title saved incorrect"
 
         selected_marketplace = self.browser.find_element(*EbayShippingPolicyLocators.SELECTED_MARKETPLACE)
-        assert selected_marketplace.get_attribute("selected") is not None, f"{us_marketplace} marketplace isn't selected"
+        assert selected_marketplace.get_attribute("selected") is not None, f"{us_marketplace_shipping} marketplace isn't selected"

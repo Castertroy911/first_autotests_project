@@ -16,7 +16,7 @@ class Helper(BasePage):
     def wait_for_element(self, method, selector, timeout=5):
         return WebDriverWait(self.browser, timeout).until(EC.presence_of_element_located((method, selector)))
 
-    def wait_for_text_in_element(self, text, method, selector, timeout=300):
+    def wait_for_text_in_element(self, text, method, selector, timeout=5):
         return WebDriverWait(self.browser, timeout).until(EC.text_to_be_present_in_element((method, selector), text))
 
     def visibility_of_element(self, method, selector, timeout=5):
@@ -37,8 +37,8 @@ class Helper(BasePage):
             assert NoSuchElementException is False, f"Element with a value {value} is not enabled for selecting"
 
     def is_element_selected(self, method, selector):
-        assert self.browser.find_element(method, selector).get_attribute("selected"), "Element isn't selected, but it" \
-                                                                                      " should be"
+        assert self.browser.find_element(method, selector).get_attribute("selected") is not None, "Element isn't " \
+                                                                                        "selected, but it should be"
 
     def is_element_deselected(self, method, selector):
         assert self.browser.find_element(method, selector).get_attribute("selected") is None, "Element is selected, " \

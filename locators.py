@@ -125,6 +125,7 @@ class PoliciesPageLocators:
     ADD_BUTTON = (By.CSS_SELECTOR, ".add")
     ADD_SHIPPING_POLICY = (By.CSS_SELECTOR, "#add_policy-shipping")
     ADD_SYNCHRONIZATION_POLICY = (By.CSS_SELECTOR, "#add_policy-synchronization")
+    ADD_RETURN_POLICY = (By.CSS_SELECTOR, "#add_policy-return")
 
 
 class EbayShippingPolicyLocators:
@@ -161,3 +162,12 @@ class EbaySynchronizationPolicyLocators:
     STOP_TAB = (By.CSS_SELECTOR, "[name = 'stop_rules']")
     STOP_MODE = (By.CSS_SELECTOR, "#stop_mode>[value = '1']")
     SAVE_AND_CONTINUE = (By.CSS_SELECTOR, "#save_and_continue-button")
+
+
+class EbayReturnPolicyLocators:
+    TITLE = (By.CSS_SELECTOR, "#title")
+    MARKETPLACE = (By.CSS_SELECTOR, "#marketplace_id")
+    DOMESTIC_RETURNS_BLOCK = (By.CSS_SELECTOR, "#return_policy_domestic_returns_fieldset")
+    SAVE_AND_CONTINUE = (By.CSS_SELECTOR, "#save_and_continue-button")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "[data-ui-id='messages-message-success']")
+    MARKETPLACE_SELECTED = (By.CSS_SELECTOR, "#marketplace_id>[value = '1']")

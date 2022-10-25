@@ -3,7 +3,7 @@ from selenium import webdriver
 from locators import LoginPageLocators
 from m2.config.local_config import *
 from Credentials.credentials_magento import *
-import time
+
 
 
 @pytest.fixture(scope='class')
