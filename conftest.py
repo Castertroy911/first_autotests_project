@@ -5,7 +5,6 @@ from m2.config.local_config import *
 from Credentials.credentials_magento import *
 
 
-
 @pytest.fixture(scope='class')
 def browser():
     browser = webdriver.Chrome()
